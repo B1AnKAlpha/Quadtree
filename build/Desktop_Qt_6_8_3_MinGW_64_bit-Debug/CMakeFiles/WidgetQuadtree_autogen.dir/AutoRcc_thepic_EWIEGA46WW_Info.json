@@ -1,0 +1,22 @@
+{
+	"BUILD_DIR" : "E:/Code/GIS/WidgetQuadtree/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/WidgetQuadtree_autogen",
+	"CMAKE_BINARY_DIR" : "E:/Code/GIS/WidgetQuadtree/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "E:/Code/GIS/WidgetQuadtree/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "E:/Code/GIS/WidgetQuadtree",
+	"CMAKE_SOURCE_DIR" : "E:/Code/GIS/WidgetQuadtree",
+	"CROSS_CONFIG" : false,
+	"GENERATOR" : "Ninja",
+	"INCLUDE_DIR" : "E:/Code/GIS/WidgetQuadtree/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/WidgetQuadtree_autogen/include",
+	"INPUTS" : [ "E:/Code/GIS/WidgetQuadtree/output_plot3.png" ],
+	"LOCK_FILE" : "E:/Code/GIS/WidgetQuadtree/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/CMakeFiles/WidgetQuadtree_autogen.dir/AutoRcc_thepic_EWIEGA46WW_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "--no-zstd", "-name", "thepic" ],
+	"OUTPUT_CHECKSUM" : "EWIEGA46WW",
+	"OUTPUT_NAME" : "qrc_thepic.cpp",
+	"RCC_EXECUTABLE" : "E:/Qt/6.8.3/mingw_64/bin/rcc.exe",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "E:/Code/GIS/WidgetQuadtree/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/CMakeFiles/WidgetQuadtree_autogen.dir/AutoRcc_thepic_EWIEGA46WW_Used.txt",
+	"SOURCE" : "E:/Code/GIS/WidgetQuadtree/thepic.qrc",
+	"USE_BETTER_GRAPH" : true,
+	"VERBOSITY" : 0
+}

@@ -1,0 +1,3 @@
+E:/Code/GIS/WidgetQuadtree/build/Desktop_Qt_6_8_3_MinGW_64_bit-MinSizeRel/CMakeFiles/CMakeScratch/TryCompile-jm67vl/CMakeFiles/cmTC_4e7b4.dir
+E:/Code/GIS/WidgetQuadtree/build/Desktop_Qt_6_8_3_MinGW_64_bit-MinSizeRel/CMakeFiles/CMakeScratch/TryCompile-jm67vl/CMakeFiles/edit_cache.dir
+E:/Code/GIS/WidgetQuadtree/build/Desktop_Qt_6_8_3_MinGW_64_bit-MinSizeRel/CMakeFiles/CMakeScratch/TryCompile-jm67vl/CMakeFiles/rebuild_cache.dir
