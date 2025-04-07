@@ -1,6 +1,8 @@
 E:/Code/GIS/WidgetQuadtree/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/WidgetQuadtree_autogen/EWIEGA46WW/moc_mainwindow.cpp: E:/Code/GIS/WidgetQuadtree/mainwindow.h \
   E:/Code/GIS/WidgetQuadtree/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/WidgetQuadtree_autogen/moc_predefs.h \
+  E:/Code/GIS/WidgetQuadtree/overlaywidget.h \
   E:/Code/GIS/WidgetQuadtree/quadtree.h \
+  E:/Qt/6.8.3/mingw_64/include/QtCore/QPoint \
   E:/Qt/6.8.3/mingw_64/include/QtCore/q20functional.h \
   E:/Qt/6.8.3/mingw_64/include/QtCore/q20iterator.h \
   E:/Qt/6.8.3/mingw_64/include/QtCore/q20memory.h \
@@ -116,6 +118,7 @@ E:/Code/GIS/WidgetQuadtree/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/WidgetQuadt
   E:/Qt/6.8.3/mingw_64/include/QtCore/qtversionchecks.h \
   E:/Qt/6.8.3/mingw_64/include/QtCore/qtypeinfo.h \
   E:/Qt/6.8.3/mingw_64/include/QtCore/qtypes.h \
+  E:/Qt/6.8.3/mingw_64/include/QtCore/qurl.h \
   E:/Qt/6.8.3/mingw_64/include/QtCore/qutf8stringview.h \
   E:/Qt/6.8.3/mingw_64/include/QtCore/qvariant.h \
   E:/Qt/6.8.3/mingw_64/include/QtCore/qvarlengtharray.h \
@@ -135,19 +138,28 @@ E:/Code/GIS/WidgetQuadtree/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/WidgetQuadt
   E:/Qt/6.8.3/mingw_64/include/QtGui/qkeysequence.h \
   E:/Qt/6.8.3/mingw_64/include/QtGui/qpaintdevice.h \
   E:/Qt/6.8.3/mingw_64/include/QtGui/qpalette.h \
+  E:/Qt/6.8.3/mingw_64/include/QtGui/qpen.h \
   E:/Qt/6.8.3/mingw_64/include/QtGui/qpixelformat.h \
   E:/Qt/6.8.3/mingw_64/include/QtGui/qpixmap.h \
   E:/Qt/6.8.3/mingw_64/include/QtGui/qpolygon.h \
   E:/Qt/6.8.3/mingw_64/include/QtGui/qregion.h \
   E:/Qt/6.8.3/mingw_64/include/QtGui/qrgb.h \
   E:/Qt/6.8.3/mingw_64/include/QtGui/qrgba64.h \
+  E:/Qt/6.8.3/mingw_64/include/QtGui/qtextcursor.h \
+  E:/Qt/6.8.3/mingw_64/include/QtGui/qtextdocument.h \
+  E:/Qt/6.8.3/mingw_64/include/QtGui/qtextformat.h \
+  E:/Qt/6.8.3/mingw_64/include/QtGui/qtextoption.h \
   E:/Qt/6.8.3/mingw_64/include/QtGui/qtgui-config.h \
   E:/Qt/6.8.3/mingw_64/include/QtGui/qtguiexports.h \
   E:/Qt/6.8.3/mingw_64/include/QtGui/qtguiglobal.h \
   E:/Qt/6.8.3/mingw_64/include/QtGui/qtransform.h \
   E:/Qt/6.8.3/mingw_64/include/QtGui/qwindowdefs.h \
   E:/Qt/6.8.3/mingw_64/include/QtGui/qwindowdefs_win.h \
+  E:/Qt/6.8.3/mingw_64/include/QtWidgets/QLineEdit \
   E:/Qt/6.8.3/mingw_64/include/QtWidgets/QMainWindow \
+  E:/Qt/6.8.3/mingw_64/include/QtWidgets/QWidget \
+  E:/Qt/6.8.3/mingw_64/include/QtWidgets/qframe.h \
+  E:/Qt/6.8.3/mingw_64/include/QtWidgets/qlineedit.h \
   E:/Qt/6.8.3/mingw_64/include/QtWidgets/qmainwindow.h \
   E:/Qt/6.8.3/mingw_64/include/QtWidgets/qsizepolicy.h \
   E:/Qt/6.8.3/mingw_64/include/QtWidgets/qtabwidget.h \

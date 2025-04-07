@@ -315,6 +315,12 @@
 			null
 		],
 		[
+			"E:/Code/GIS/WidgetQuadtree/overlaywidget.h",
+			"MU",
+			"EWIEGA46WW/moc_overlaywidget.cpp",
+			null
+		],
+		[
 			"E:/Code/GIS/WidgetQuadtree/quadtree.h",
 			"MU",
 			"EWIEGA46WW/moc_quadtree.cpp",
@@ -396,6 +402,7 @@
 		[ "E:/Code/GIS/WidgetQuadtree/main2.cpp", "MU", null ],
 		[ "E:/Code/GIS/WidgetQuadtree/mainwindow.cpp", "MU", null ],
 		[ "E:/Code/GIS/WidgetQuadtree/mian.cpp", "MU", null ],
+		[ "E:/Code/GIS/WidgetQuadtree/overlaywidget.cpp", "MU", null ],
 		[ "E:/Code/GIS/WidgetQuadtree/quadtree.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],

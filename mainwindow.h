@@ -3,6 +3,9 @@
 
 #include "quadtree.h"
 #include <QMainWindow>
+#include <QPoint>
+#include <QLineEdit>
+#include "overlaywidget.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -18,6 +21,8 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+protected:
+    void resizeEvent(QResizeEvent *event) override;
 
 private slots:
     void on_label_2_linkActivated(const QString &link);
@@ -29,7 +34,12 @@ private slots:
 private:
     Ui::MainWindow *ui;
     QuadNode* root = nullptr;
+    OverlayWidget *overlay;
+    void updateLineEdits(const QPoint &p1, const QPoint &p2);
+
 };
+
+
 
 
 #endif // MAINWINDOW_H

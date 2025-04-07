@@ -6,15 +6,25 @@
 #include <QApplication>
 #include <QFile>
 #include <QTextStream>
+#include <QMouseEvent>
+#include <QPainter>
 #pragma execution_character_set("utf-8")
 
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
+
 {
     ui->setupUi(this);
     QuadNode* root = new QuadNode();
+    overlay = new OverlayWidget(this);
+    overlay->setGeometry(this->rect());
+    overlay->raise();  // 确保在最上面
+    overlay->show();
+
+    // 连接信号槽
+    connect(overlay, &OverlayWidget::rectangleReady, this, &MainWindow::updateLineEdits);
 }
 
 MainWindow::~MainWindow()
@@ -26,7 +36,22 @@ void MainWindow::on_label_2_linkActivated(const QString &link)
 {
 
 }
+void MainWindow::resizeEvent(QResizeEvent *event) {
+    QMainWindow::resizeEvent(event);
+    if (overlay) overlay->setGeometry(this->rect()); // 保持覆盖
+}
 
+void MainWindow::updateLineEdits(const QPoint &p1, const QPoint &p2) {
+    QPoint tl(std::min(p1.x(), p2.x()), std::min(p1.y(), p2.y()));
+    QPoint tr(std::max(p1.x(), p2.x()), std::min(p1.y(), p2.y()));
+    QPoint br(std::max(p1.x(), p2.x()), std::max(p1.y(), p2.y()));
+    QPoint bl(std::min(p1.x(), p2.x()), std::max(p1.y(), p2.y()));
+
+    ui->lineEdit_3->setText(QString("(%1, %2)").arg(tl.x()).arg(tl.y()));
+    ui->lineEdit_4->setText(QString("(%1, %2)").arg(tr.x()).arg(tr.y()));
+    ui->lineEdit_5->setText(QString("(%1, %2)").arg(br.x()).arg(br.y()));
+    ui->lineEdit_6->setText(QString("(%1, %2)").arg(bl.x()).arg(bl.y()));
+}
 
 
 void MainWindow::on_pushButton_clicked()

@@ -34,6 +34,12 @@ public:
     QLineEdit *lineEdit_2;
     QPushButton *pushButton;
     QPushButton *pushButton_2;
+    QLabel *label_4;
+    QLabel *label_5;
+    QLineEdit *lineEdit_3;
+    QLineEdit *lineEdit_4;
+    QLineEdit *lineEdit_5;
+    QLineEdit *lineEdit_6;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -60,16 +66,34 @@ public:
         textEdit->setGeometry(QRect(600, 450, 211, 91));
         lineEdit = new QLineEdit(centralwidget);
         lineEdit->setObjectName("lineEdit");
-        lineEdit->setGeometry(QRect(600, 270, 113, 23));
+        lineEdit->setGeometry(QRect(600, 130, 113, 23));
         lineEdit_2 = new QLineEdit(centralwidget);
         lineEdit_2->setObjectName("lineEdit_2");
-        lineEdit_2->setGeometry(QRect(600, 300, 113, 23));
+        lineEdit_2->setGeometry(QRect(600, 180, 113, 23));
         pushButton = new QPushButton(centralwidget);
         pushButton->setObjectName("pushButton");
-        pushButton->setGeometry(QRect(730, 280, 80, 24));
+        pushButton->setGeometry(QRect(650, 270, 80, 24));
         pushButton_2 = new QPushButton(centralwidget);
         pushButton_2->setObjectName("pushButton_2");
         pushButton_2->setGeometry(QRect(610, 10, 191, 51));
+        label_4 = new QLabel(centralwidget);
+        label_4->setObjectName("label_4");
+        label_4->setGeometry(QRect(640, 100, 81, 31));
+        label_5 = new QLabel(centralwidget);
+        label_5->setObjectName("label_5");
+        label_5->setGeometry(QRect(640, 150, 81, 31));
+        lineEdit_3 = new QLineEdit(centralwidget);
+        lineEdit_3->setObjectName("lineEdit_3");
+        lineEdit_3->setGeometry(QRect(600, 340, 113, 23));
+        lineEdit_4 = new QLineEdit(centralwidget);
+        lineEdit_4->setObjectName("lineEdit_4");
+        lineEdit_4->setGeometry(QRect(720, 340, 113, 23));
+        lineEdit_5 = new QLineEdit(centralwidget);
+        lineEdit_5->setObjectName("lineEdit_5");
+        lineEdit_5->setGeometry(QRect(600, 370, 113, 23));
+        lineEdit_6 = new QLineEdit(centralwidget);
+        lineEdit_6->setObjectName("lineEdit_6");
+        lineEdit_6->setGeometry(QRect(720, 370, 113, 23));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
@@ -94,6 +118,12 @@ public:
         lineEdit_2->setText(QCoreApplication::translate("MainWindow", "39.92123", nullptr));
         pushButton->setText(QCoreApplication::translate("MainWindow", "\346\237\245\350\257\242", nullptr));
         pushButton_2->setText(QCoreApplication::translate("MainWindow", "\346\236\204\345\273\272\345\233\233\345\217\211\346\240\221", nullptr));
+        label_4->setText(QCoreApplication::translate("MainWindow", "\347\273\217\345\272\246", nullptr));
+        label_5->setText(QCoreApplication::translate("MainWindow", "\347\272\254\345\272\246", nullptr));
+        lineEdit_3->setText(QCoreApplication::translate("MainWindow", "39.92123", nullptr));
+        lineEdit_4->setText(QCoreApplication::translate("MainWindow", "39.92123", nullptr));
+        lineEdit_5->setText(QCoreApplication::translate("MainWindow", "39.92123", nullptr));
+        lineEdit_6->setText(QCoreApplication::translate("MainWindow", "39.92123", nullptr));
     } // retranslateUi
 
 };
