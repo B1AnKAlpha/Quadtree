@@ -9,6 +9,7 @@
 #include <QApplication>
 #include <QMainWindow>
 #include "mainwindow.h"
+#include <QFile>
 
 #include <QApplication>
 
@@ -36,6 +37,7 @@ GPSdata* str2data(std::string s) {
 }
 
 void printVector(vector<GPSdata*> v) {
+    QFile::remove("output.txt");
     for (auto data : v) {
         data->print();
     }

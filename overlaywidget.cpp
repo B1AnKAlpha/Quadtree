@@ -3,10 +3,10 @@
 #include <QMouseEvent>
 
 OverlayWidget::OverlayWidget(QWidget *parent) : QWidget(parent) {
-    setAttribute(Qt::WA_TransparentForMouseEvents, false); // 接收鼠标事件
+   // setAttribute(Qt::WA_TransparentForMouseEvents, true); // 接收鼠标事件
     setAttribute(Qt::WA_NoSystemBackground, true);
     setAttribute(Qt::WA_TranslucentBackground, true);
-    setAttribute(Qt::WA_TransparentForMouseEvents, false);
+    setAttribute(Qt::WA_TransparentForMouseEvents, false); // 要接收鼠标事件
 }
 
 void OverlayWidget::clearPoints() {

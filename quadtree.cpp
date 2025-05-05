@@ -18,12 +18,10 @@ void GPSdata::print() {
         return;
     }
 
-    outFile << "id:" << this->id << '\n';
-    outFile << "time:" << this->time << '\n';
-    outFile << "coordinate:" << std::fixed << std::setprecision(5)
+    outFile << "id:" << this->id <<std::setw(20)<< "时间:" << this->time<<std::setw(20)<<"坐标:" << std::fixed << std::setprecision(5)
             << this->longitude << ',' << std::fixed << std::setprecision(5)
             << this->latitude << '\n';
-    outFile << "--------------------------\n";
+    //outFile << "--------------------------\n";
 
     outFile.close();
 }
@@ -240,6 +238,65 @@ vector<GPSdata*> QuadNode::AreaSearch(Rectangle* rect) {
             ++k;
             for (auto dat : leafs[i]) {
                 if (rect->Inside(dat->longitude, dat->latitude)) {
+                    result.emplace_back(dat);
+                }
+            }
+        }
+    }
+
+    return result;
+}
+
+vector<GPSdata*> QuadNode::TrajectorySearch(Rectangle* rect, int target_idx) {
+    point2d p1 = rect->top_right;
+    point2d p2 = rect->bottom_left;
+    point2d p3 =
+        std::make_pair(rect->top_right.first, rect->bottom_left.second);
+    point2d p4 =
+        std::make_pair(rect->bottom_left.first, rect->top_right.second);
+
+    vector<vector<GPSdata*>> leafs;
+    vector<GPSdata*> leaf1, leaf2, leaf3, leaf4;
+    this->findPointLeaf(p1, leaf1);
+    this->findPointLeaf(p2, leaf2);
+    this->findPointLeaf(p3, leaf3);
+    this->findPointLeaf(p4, leaf4);
+    leafs.emplace_back(leaf1);
+    leafs.emplace_back(leaf2);
+    leafs.emplace_back(leaf3);
+    leafs.emplace_back(leaf4);
+
+    vector<GPSdata*> temp = {leafs[0].empty() ? nullptr : leafs[0][0],
+                              leafs[1].empty() ? nullptr : leafs[1][0],
+                              leafs[2].empty() ? nullptr : leafs[2][0],
+                              leafs[3].empty() ? nullptr : leafs[3][0]};
+    vector<int> same(4, 0);
+    int k = 1;
+    for (int i = 0; i < 4; ++i) {
+        if (same[i] == 0) {
+            same[i] = k;
+            ++k;
+        }
+
+        for (int j = 0; j < 4; ++j) {
+            // 这块是空的就设置为5，因为如果不是空的最大也就是4
+            if (temp[i] == nullptr) {
+                same[i] = 5;
+            } else {
+                if (same[j] == 0 && temp[i]->time == temp[j]->time) {
+                    same[j] = same[i];
+                }
+            }
+        }
+    }
+
+    k = 1;
+    vector<GPSdata*> result;
+    for (int i = 0; i < 4; ++i) {
+        if (same[i] == k) {
+            ++k;
+            for (auto dat : leafs[i]) {
+                if (dat && rect->Inside(dat->longitude, dat->latitude) && dat->id == target_idx) {
                     result.emplace_back(dat);
                 }
             }

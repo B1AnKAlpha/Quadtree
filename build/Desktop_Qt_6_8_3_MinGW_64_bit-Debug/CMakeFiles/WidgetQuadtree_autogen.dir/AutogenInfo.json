@@ -309,6 +309,12 @@
 			null
 		],
 		[
+			"E:/Code/GIS/WidgetQuadtree/drawwidget.h",
+			"MU",
+			"EWIEGA46WW/moc_drawwidget.cpp",
+			null
+		],
+		[
 			"E:/Code/GIS/WidgetQuadtree/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
@@ -399,6 +405,7 @@
 	"SOURCES" : 
 	[
 		[ "E:/Code/GIS/WidgetQuadtree/common.cpp", "MU", null ],
+		[ "E:/Code/GIS/WidgetQuadtree/drawwidget.cpp", "MU", null ],
 		[ "E:/Code/GIS/WidgetQuadtree/main2.cpp", "MU", null ],
 		[ "E:/Code/GIS/WidgetQuadtree/mainwindow.cpp", "MU", null ],
 		[ "E:/Code/GIS/WidgetQuadtree/mian.cpp", "MU", null ],

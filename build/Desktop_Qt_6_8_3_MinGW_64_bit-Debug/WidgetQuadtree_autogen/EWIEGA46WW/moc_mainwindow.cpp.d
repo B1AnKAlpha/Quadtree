@@ -1,8 +1,12 @@
 E:/Code/GIS/WidgetQuadtree/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/WidgetQuadtree_autogen/EWIEGA46WW/moc_mainwindow.cpp: E:/Code/GIS/WidgetQuadtree/mainwindow.h \
   E:/Code/GIS/WidgetQuadtree/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/WidgetQuadtree_autogen/moc_predefs.h \
+  E:/Code/GIS/WidgetQuadtree/drawwidget.h \
   E:/Code/GIS/WidgetQuadtree/overlaywidget.h \
   E:/Code/GIS/WidgetQuadtree/quadtree.h \
+  E:/Qt/6.8.3/mingw_64/include/QtCore/QEvent \
   E:/Qt/6.8.3/mingw_64/include/QtCore/QPoint \
+  E:/Qt/6.8.3/mingw_64/include/QtCore/QPointF \
+  E:/Qt/6.8.3/mingw_64/include/QtCore/QVector \
   E:/Qt/6.8.3/mingw_64/include/QtCore/q20functional.h \
   E:/Qt/6.8.3/mingw_64/include/QtCore/q20iterator.h \
   E:/Qt/6.8.3/mingw_64/include/QtCore/q20memory.h \
@@ -34,6 +38,7 @@ E:/Code/GIS/WidgetQuadtree/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/WidgetQuadt
   E:/Qt/6.8.3/mingw_64/include/QtCore/qcontainerinfo.h \
   E:/Qt/6.8.3/mingw_64/include/QtCore/qcontainertools_impl.h \
   E:/Qt/6.8.3/mingw_64/include/QtCore/qcontiguouscache.h \
+  E:/Qt/6.8.3/mingw_64/include/QtCore/qcoreevent.h \
   E:/Qt/6.8.3/mingw_64/include/QtCore/qdarwinhelpers.h \
   E:/Qt/6.8.3/mingw_64/include/QtCore/qdatastream.h \
   E:/Qt/6.8.3/mingw_64/include/QtCore/qdebug.h \
@@ -49,6 +54,7 @@ E:/Code/GIS/WidgetQuadtree/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/WidgetQuadt
   E:/Qt/6.8.3/mingw_64/include/QtCore/qglobalstatic.h \
   E:/Qt/6.8.3/mingw_64/include/QtCore/qhash.h \
   E:/Qt/6.8.3/mingw_64/include/QtCore/qhashfunctions.h \
+  E:/Qt/6.8.3/mingw_64/include/QtCore/qiodevice.h \
   E:/Qt/6.8.3/mingw_64/include/QtCore/qiodevicebase.h \
   E:/Qt/6.8.3/mingw_64/include/QtCore/qiterable.h \
   E:/Qt/6.8.3/mingw_64/include/QtCore/qiterator.h \
@@ -122,6 +128,7 @@ E:/Code/GIS/WidgetQuadtree/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/WidgetQuadt
   E:/Qt/6.8.3/mingw_64/include/QtCore/qutf8stringview.h \
   E:/Qt/6.8.3/mingw_64/include/QtCore/qvariant.h \
   E:/Qt/6.8.3/mingw_64/include/QtCore/qvarlengtharray.h \
+  E:/Qt/6.8.3/mingw_64/include/QtCore/qvector.h \
   E:/Qt/6.8.3/mingw_64/include/QtCore/qversiontagging.h \
   E:/Qt/6.8.3/mingw_64/include/QtCore/qxptype_traits.h \
   E:/Qt/6.8.3/mingw_64/include/QtCore/qyieldcpu.h \
@@ -139,6 +146,7 @@ E:/Code/GIS/WidgetQuadtree/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/WidgetQuadt
   E:/Qt/6.8.3/mingw_64/include/QtGui/qpaintdevice.h \
   E:/Qt/6.8.3/mingw_64/include/QtGui/qpalette.h \
   E:/Qt/6.8.3/mingw_64/include/QtGui/qpen.h \
+  E:/Qt/6.8.3/mingw_64/include/QtGui/qpicture.h \
   E:/Qt/6.8.3/mingw_64/include/QtGui/qpixelformat.h \
   E:/Qt/6.8.3/mingw_64/include/QtGui/qpixmap.h \
   E:/Qt/6.8.3/mingw_64/include/QtGui/qpolygon.h \
@@ -155,10 +163,12 @@ E:/Code/GIS/WidgetQuadtree/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/WidgetQuadt
   E:/Qt/6.8.3/mingw_64/include/QtGui/qtransform.h \
   E:/Qt/6.8.3/mingw_64/include/QtGui/qwindowdefs.h \
   E:/Qt/6.8.3/mingw_64/include/QtGui/qwindowdefs_win.h \
+  E:/Qt/6.8.3/mingw_64/include/QtWidgets/QLabel \
   E:/Qt/6.8.3/mingw_64/include/QtWidgets/QLineEdit \
   E:/Qt/6.8.3/mingw_64/include/QtWidgets/QMainWindow \
   E:/Qt/6.8.3/mingw_64/include/QtWidgets/QWidget \
   E:/Qt/6.8.3/mingw_64/include/QtWidgets/qframe.h \
+  E:/Qt/6.8.3/mingw_64/include/QtWidgets/qlabel.h \
   E:/Qt/6.8.3/mingw_64/include/QtWidgets/qlineedit.h \
   E:/Qt/6.8.3/mingw_64/include/QtWidgets/qmainwindow.h \
   E:/Qt/6.8.3/mingw_64/include/QtWidgets/qsizepolicy.h \
