@@ -338,8 +338,113 @@ GPSdata* QuadNode::AdjacentSearch(Rectangle* rect,
     return result;
 }
 
-bool QuadNode::PointChange(int id, point2d p, double lon, double lat) {}
+bool QuadNode::PointDelete(int id, double lon, double lat) {
+    // 如果当前区域不包含该点，直接返回失败
+    if (!range->Inside(lon, lat)) {
+        return false;
+    }
 
-bool QuadNode::PointDelete(int id, double lon, double lat) {}
+    // 如果是叶子节点，直接在当前节点的data中查找并删除
+    if (isLeaf()) {
+        for (auto it = data.begin(); it != data.end(); ++it) {
+            if ((*it)->id == id && equal((*it)->longitude, lon) && equal((*it)->latitude, lat)) {
+                delete *it; // 释放内存
+                data.erase(it);
+                return true;
+            }
+        }
+        return false; // 未找到匹配的点
+    } else {
+        // 确定子节点位置
+        double x_center = (range->top_right.first + range->bottom_left.first) / 2;
+        double y_center = (range->top_right.second + range->bottom_left.second) / 2;
 
-bool QuadNode::PointDelete(int id, string time) {}
+        int index = -1;
+        if (lon <= x_center) {
+            index = (lat >= y_center) ? LEFTTOP : LEFTBOT;
+        } else {
+            index = (lat >= y_center) ? RIGHTTOP : RIGHTBOT;
+        }
+
+        // 如果子节点存在，递归删除
+        if (child[index] != nullptr) {
+            return child[index]->PointDelete(id, lon, lat);
+        } else {
+            // 子节点不存在，说明数据存储在当前节点（可能未分割）
+            for (auto it = data.begin(); it != data.end(); ++it) {
+                if ((*it)->id == id && equal((*it)->longitude, lon) && equal((*it)->latitude, lat)) {
+                    delete *it;
+                    data.erase(it);
+                    return true;
+                }
+            }
+            return false;
+        }
+    }
+}
+
+bool QuadNode::PointDelete(int id, string time) {
+    bool deleted = false;
+
+    // 递归遍历整个四叉树
+    if (!isLeaf()) {
+        for (int i = 0; i < 4; ++i) {
+            if (child[i] != nullptr) {
+                deleted = child[i]->PointDelete(id, time);
+                if (deleted) return true;
+            }
+        }
+    }
+
+    // 在当前节点的data中查找并删除
+    for (auto it = data.begin(); it != data.end(); ++it) {
+        if ((*it)->id == id && (*it)->time == time) {
+            delete *it;
+            data.erase(it);
+            return true;
+        }
+    }
+
+    return deleted;
+}
+
+bool QuadNode::PointChange(int id, point2d p, double new_lon, double new_lat) {
+    // 旧坐标p对应的点
+    GPSdata* old_data = nullptr;
+
+    // 找到旧坐标p的叶子节点
+    vector<GPSdata*> leaf_data;
+    findPointLeaf(p, leaf_data);
+
+    // 查找旧数据点
+    for (auto data : leaf_data) {
+        if (data->id == id && equal(data->longitude, p.first) && equal(data->latitude, p.second)) {
+            old_data = data;
+            break;
+        }
+    }
+
+    if (old_data == nullptr) {
+        return false; // 未找到旧数据点
+    }
+
+    // 删除旧数据点
+    if (!PointDelete(id, p.first, p.second)) {
+        return false;
+    }
+
+    // 创建新数据点并插入四叉树
+    GPSdata* new_data = new GPSdata(id, old_data->time, new_lon, new_lat);
+   // delete old_data; // 释放旧数据内存
+
+    // 插入新数据点（需要重新构建四叉树插入逻辑）
+    // 假设根节点为this，最大深度为某个固定值（如10）
+    InsertNode(new_data, 10);
+    return true;
+}
+
+//bool QuadNode::PointChange(int id, point2d p, double lon, double lat) {}
+
+//bool QuadNode::PointDelete(int id, double lon, double lat) {}
+
+//bool QuadNode::PointDelete(int id, string time) {}

@@ -378,3 +378,71 @@ void MainWindow::on_pushButton_5_clicked()
     }
 }
 
+
+void MainWindow::on_pushButton_6_clicked()
+{
+    QString lon = ui->lineEdit->text();
+    double x = lon.toDouble();
+    QString lan = ui->lineEdit_2->text();
+    double y = lan.toDouble();
+    QString newlon = ui->lineEdit_11->text();
+    double newx = newlon.toDouble();
+    QString newlan = ui->lineEdit_10->text();
+    double newy = newlan.toDouble();
+    QString idx = ui->lineEdit_9->text();
+    int id = idx.toDouble();
+    qDebug() << "输入经度：" << lon << " 转换后：" << x;
+    qDebug() << "输入纬度：" << lan << " 转换后：" << y;
+    auto result = root->PointChange(id,std::make_pair(x, y),newx,newy);
+    ui->textEdit->setText("222");
+    if (result == false) {
+        //std::cout << "未查询到\n";
+        ui->textEdit->setText("未查询到");
+       // ui->textEdit->setText(lon+lan);
+    } else {
+
+        //ui->textEdit->setText(result);
+        ui->textEdit->setText("更改成功");
+        //printVector(result);
+
+
+        // QFile file("output.txt"); // 你也可以写绝对路径
+
+        // if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        //     ui->textEdit->setText("无法打开文件！");
+        //     return;
+        // }
+
+        // QTextStream in(&file);
+        // QString fileContent = in.readAll();  // 读取全部内容
+        // file.close();
+
+        // ui->textEdit->setText(fileContent);  // 设置到文本框中
+    }
+}
+
+
+void MainWindow::on_pushButton_7_clicked()
+{
+    QString lon = ui->lineEdit->text();
+    double x = lon.toDouble();
+    QString lan = ui->lineEdit_2->text();
+    double y = lan.toDouble();
+    QString idx = ui->lineEdit_9->text();
+    int id = idx.toDouble();
+    qDebug() << "输入经度：" << lon << " 转换后：" << x;
+    qDebug() << "输入纬度：" << lan << " 转换后：" << y;
+    auto result = root->PointDelete(id,x, y);
+    ui->textEdit->setText("222");
+    if (result == false) {
+        //std::cout << "未查询到\n";
+        ui->textEdit->setText("未查询到");
+        // ui->textEdit->setText(lon+lan);
+    } else {
+
+        //ui->textEdit->setText(result);
+        ui->textEdit->setText("删除成功");
+
+    }
+}
+
