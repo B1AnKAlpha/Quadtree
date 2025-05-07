@@ -279,7 +279,6 @@ vector<GPSdata*> QuadNode::TrajectorySearch(Rectangle* rect, int target_idx) {
         }
 
         for (int j = 0; j < 4; ++j) {
-            // 这块是空的就设置为5，因为如果不是空的最大也就是4
             if (temp[i] == nullptr) {
                 same[i] = 5;
             } else {
@@ -386,7 +385,6 @@ bool QuadNode::PointDelete(int id, double lon, double lat) {
 bool QuadNode::PointDelete(int id, string time) {
     bool deleted = false;
 
-    // 递归遍历整个四叉树
     if (!isLeaf()) {
         for (int i = 0; i < 4; ++i) {
             if (child[i] != nullptr) {
@@ -396,7 +394,6 @@ bool QuadNode::PointDelete(int id, string time) {
         }
     }
 
-    // 在当前节点的data中查找并删除
     for (auto it = data.begin(); it != data.end(); ++it) {
         if ((*it)->id == id && (*it)->time == time) {
             delete *it;

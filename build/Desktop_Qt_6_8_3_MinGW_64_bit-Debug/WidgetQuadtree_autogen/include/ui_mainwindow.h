@@ -59,6 +59,7 @@ public:
     QLabel *label_7;
     QLabel *label_13;
     QLineEdit *lineEdit_11;
+    QPushButton *pushButton_7;
     QLabel *label_6;
     QMenuBar *menubar;
     QStatusBar *statusbar;
@@ -168,6 +169,9 @@ public:
         lineEdit_11 = new QLineEdit(groupBox_2);
         lineEdit_11->setObjectName("lineEdit_11");
         lineEdit_11->setGeometry(QRect(50, 30, 221, 23));
+        pushButton_7 = new QPushButton(groupBox_2);
+        pushButton_7->setObjectName("pushButton_7");
+        pushButton_7->setGeometry(QRect(100, 300, 80, 24));
         label_6 = new QLabel(centralwidget);
         label_6->setObjectName("label_6");
         label_6->setGeometry(QRect(530, 570, 171, 16));
@@ -251,6 +255,7 @@ public:
         label_7->setText(QCoreApplication::translate("MainWindow", "\346\226\260\347\273\217\345\272\246", nullptr));
         label_13->setText(QCoreApplication::translate("MainWindow", "\346\226\260\347\272\254\345\272\246", nullptr));
         lineEdit_11->setText(QCoreApplication::translate("MainWindow", "116.51172", nullptr));
+        pushButton_7->setText(QCoreApplication::translate("MainWindow", "\350\275\250\350\277\271\345\210\240\351\231\244", nullptr));
         label_6->setText(QCoreApplication::translate("MainWindow", "2023113911 \344\272\216\346\262\233\350\261\252", nullptr));
     } // retranslateUi
 

@@ -308,7 +308,7 @@ void MainWindow::on_pushButton_4_clicked()
         result->print();
 
 
-        QFile file("output.txt"); // 你也可以写绝对路径
+        QFile file("output.txt");
 
         if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
             ui->textEdit->setText("无法打开文件！");
@@ -364,14 +364,10 @@ void MainWindow::on_pushButton_5_clicked()
         file.close();
 
         ui->textEdit->setText(fileContent);  // 设置到文本框中
-        // 在 MainWindow 的构造函数中
-       // drawWidget = new DrawWidget(this); // 创建绘制控件
+
         drawWidget->setAttribute(Qt::WA_TransparentForMouseEvents, false); // 确保不拦截鼠标事件
 
-        //drawWidget->raise();
-        //setCentralWidget(drawWidget);      // 设置为中央控件
 
-        // 加载坐标数据
         drawWidget->loadPointsFromFile("output.txt");
         drawWidget->update();  // 触发重绘
 
@@ -396,28 +392,10 @@ void MainWindow::on_pushButton_6_clicked()
     auto result = root->PointChange(id,std::make_pair(x, y),newx,newy);
     ui->textEdit->setText("222");
     if (result == false) {
-        //std::cout << "未查询到\n";
         ui->textEdit->setText("未查询到");
-       // ui->textEdit->setText(lon+lan);
     } else {
-
-        //ui->textEdit->setText(result);
         ui->textEdit->setText("更改成功");
-        //printVector(result);
 
-
-        // QFile file("output.txt"); // 你也可以写绝对路径
-
-        // if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        //     ui->textEdit->setText("无法打开文件！");
-        //     return;
-        // }
-
-        // QTextStream in(&file);
-        // QString fileContent = in.readAll();  // 读取全部内容
-        // file.close();
-
-        // ui->textEdit->setText(fileContent);  // 设置到文本框中
     }
 }
 

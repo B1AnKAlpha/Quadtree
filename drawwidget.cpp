@@ -23,7 +23,6 @@ void DrawWidget::loadPointsFromFile(const QString &filename) {
     QTextStream in(&file);
     while (!in.atEnd()) {
         QString line = in.readLine();
-        // 假设每行格式为：id:xxxx 时间:yyyy-mm-dd hh:mm:ss 坐标:x,y
         QStringList parts = line.split(" 坐标:");
         if (parts.size() == 2) {
             QStringList coords = parts[1].split(",");
@@ -57,7 +56,7 @@ void DrawWidget::paintEvent(QPaintEvent *) {
     }
 
     painter.setBrush(QBrush(Qt::red));
-    painter.setPen(Qt::NoPen);  // 可选：不要边框线
+    painter.setPen(Qt::NoPen);
 
     for (const QPointF &pt : points) {
         // 在每个点的位置画一个半径为 2 的红色实心圆
