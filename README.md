@@ -1,5 +1,7 @@
 # 地理信息系统原理-四叉树管理系统
 
+> **关于新版项目**：面向生产级演示的后续迭代已迁移至 [`QuadTracer Studio`](https://github.com/B1AnKAlpha/QuadTracerStudio.git)，加入了事件监控、报表中心、设置持久化等扩展能力，并采用专有授权协议。本仓库保留最初课堂实验版本的代码与文档，功能已满足课程教学使用需求，并继续按照教学/学习用途许可开放，两者授权条款不尽相同，请在使用前确认。
+
 ![Qt](https://img.shields.io/badge/Qt-5%2F6-green.svg) ![C++](https://img.shields.io/badge/C++-17-blue.svg) ![License](https://img.shields.io/badge/License-Educational-green.svg) ![Status](https://img.shields.io/badge/Status-Complete-success.svg)
 
 西南交通大学《地理信息系统原理》课程设计项目，基于 Qt 实现的 GPS 数据四叉树空间索引管理系统。
@@ -106,4 +108,4 @@ cmake --build .
 
 ## 许可
 
-本项目仅用于教学和学习目的。
+本项目仅用于教学和学习目的，可在课堂、科研和个人学习场景下自由使用；如需超出该范围，请与作者联系确认。请注意：后续维护的新项目 `QuadTracer Studio` 采用独立的专有授权条款，二者不可混用。
